@@ -1,0 +1,32 @@
+package airport;
+
+import java.util.Objects;
+
+public abstract class TurnaroundPlanDecorator implements TurnaroundPlan {
+
+    private final TurnaroundPlan inner;
+
+    protected TurnaroundPlanDecorator(TurnaroundPlan inner) {
+        this.inner = Objects.requireNonNull(inner);
+    }
+
+    @Override
+    public TurnaroundTask rootTask() {
+        return inner.rootTask();
+    }
+
+    @Override
+    public SchedulingStrategy schedulingStrategy() {
+        return inner.schedulingStrategy();
+    }
+
+    @Override
+    public int schedulingMinutes() {
+        return inner.schedulingMinutes();  
+    }
+
+    @Override
+    public String description() {
+        return inner.description();
+    }
+}
