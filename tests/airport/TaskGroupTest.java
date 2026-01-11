@@ -3,6 +3,7 @@ package airport;
 import org.junit.Test;
 
 import utils.BasicResource;
+import utils.TotalDurationVisitor;
 
 import java.util.Set;
 

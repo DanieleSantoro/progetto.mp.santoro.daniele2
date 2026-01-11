@@ -1,10 +1,11 @@
-package airport;
+package utils;
 
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import utils.Resource;
+import airport.SimpleTask;
+import airport.TurnaroundVisitorAdapter;
 
 public final class RequiredResourcesVisitor extends TurnaroundVisitorAdapter {
 

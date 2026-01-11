@@ -1,15 +1,17 @@
-package airport;
+package utils;
+
+import airport.SimpleTask;
+import airport.TaskGroup;
+import airport.TurnaroundTask;
+import airport.TurnaroundVisitorAdapter;
 
 public class ParallelDurationVisitor extends TurnaroundVisitorAdapter{
 
-	private int currentDepth = 0;
 	private int result = 0;
 	
 	@Override
 	public void visitSimpleTask(SimpleTask task) {
-		if (currentDepth == 0) {
 			result = task.getMinutes();
-		}
 	}
 	
 	@Override
@@ -17,10 +19,7 @@ public class ParallelDurationVisitor extends TurnaroundVisitorAdapter{
 		int maxInGroup = 0;
 		
 		for (TurnaroundTask child : group.getChildren()) {
-			currentDepth++;
-			child.accept(this);
-			currentDepth--;
-			
+			child.accept(this);			
 			maxInGroup = Math.max(maxInGroup, result);
 		}
 	

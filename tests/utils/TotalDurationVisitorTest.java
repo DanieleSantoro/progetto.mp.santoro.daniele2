@@ -1,8 +1,9 @@
-package airport;
+package utils;
 
 import org.junit.Test;
 
-import utils.BasicResource;
+import airport.SimpleTask;
+import airport.TaskGroup;
 
 import java.util.Set;
 

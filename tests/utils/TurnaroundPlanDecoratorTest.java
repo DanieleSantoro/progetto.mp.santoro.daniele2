@@ -1,8 +1,11 @@
-package airport;
+package utils;
 
 import org.junit.Test;
 
-import utils.BasicResource;
+import airport.TurnaroundTask;
+import airport.TurnaroundPlan;
+import airport.SimpleTask;
+import airport.BaseTurnaroundPlan;
 
 import java.util.Set;
 

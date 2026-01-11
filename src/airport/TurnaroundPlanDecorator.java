@@ -6,8 +6,12 @@ public abstract class TurnaroundPlanDecorator implements TurnaroundPlan {
 
     private final TurnaroundPlan inner;
 
-    protected TurnaroundPlanDecorator(TurnaroundPlan inner) {
+    public TurnaroundPlanDecorator(TurnaroundPlan inner) {
         this.inner = Objects.requireNonNull(inner);
+    }
+
+    protected TurnaroundPlan inner() {
+        return inner;
     }
 
     @Override
@@ -22,7 +26,7 @@ public abstract class TurnaroundPlanDecorator implements TurnaroundPlan {
 
     @Override
     public int schedulingMinutes() {
-        return inner.schedulingMinutes();  
+        return inner.schedulingMinutes();
     }
 
     @Override

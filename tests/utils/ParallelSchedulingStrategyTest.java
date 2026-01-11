@@ -1,9 +1,15 @@
-package airport;
+package utils;
 
 import org.junit.Test;
-import utils.BasicResource;
-import java.util.Set;
 import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.Set;
+
+import airport.TaskGroup;
+import airport.SimpleTask;
+import airport.SchedulingStrategy;
+import airport.ParallelSchedulingStrategy;
+import airport.TurnaroundTask;
 
 public class ParallelSchedulingStrategyTest {
 

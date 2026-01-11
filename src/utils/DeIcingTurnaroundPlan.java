@@ -1,4 +1,7 @@
-package airport;
+package utils;
+
+import airport.TurnaroundPlan;
+import airport.TurnaroundPlanDecorator;
 
 public final class DeIcingTurnaroundPlan extends TurnaroundPlanDecorator {
 

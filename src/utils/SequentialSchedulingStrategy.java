@@ -1,4 +1,7 @@
-package airport;
+package utils;
+
+import airport.SchedulingStrategy;
+import airport.TurnaroundTask;
 
 public final class SequentialSchedulingStrategy implements SchedulingStrategy {
 

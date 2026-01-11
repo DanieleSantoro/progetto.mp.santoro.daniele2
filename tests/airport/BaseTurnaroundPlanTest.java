@@ -7,6 +7,7 @@ import java.util.Set;
 import org.junit.Test;
 
 import utils.BasicResource;
+import utils.SequentialSchedulingStrategy;
 
 public class BaseTurnaroundPlanTest {
 

@@ -1,4 +1,7 @@
-package airport;
+package utils;
+
+import airport.SimpleTask;
+import airport.TurnaroundVisitorAdapter;
 
 public final class TotalDurationVisitor extends TurnaroundVisitorAdapter {
 
